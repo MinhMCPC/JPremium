@@ -4,6 +4,7 @@ import com.community.jpremium.common.service.OnlineUserRegistry;
 import com.community.jpremium.common.config.VelocityConfigService;
 import com.community.jpremium.common.model.UserProfileData;
 import com.community.jpremium.velocity.JPremiumVelocity;
+import com.velocitypowered.api.event.PostOrder;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.command.CommandExecuteEvent;
 import com.velocitypowered.api.proxy.Player;
@@ -18,7 +19,7 @@ public class VelocityCommandGuardListener {
         this.onlineUserRegistry = jPremiumVelocity.getOnlineUserRegistry();
     }
 
-    @Subscribe
+    @Subscribe(order=PostOrder.FIRST)
     public void onCommandExecute(CommandExecuteEvent commandExecuteEvent) {
         if (!(commandExecuteEvent.getCommandSource() instanceof Player player)) {
             return;

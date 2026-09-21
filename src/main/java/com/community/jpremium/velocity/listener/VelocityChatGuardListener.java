@@ -15,7 +15,7 @@ public class VelocityChatGuardListener {
         this.onlineUserRegistry = jPremiumVelocity.getOnlineUserRegistry();
     }
 
-    @Subscribe(order=PostOrder.LATE)
+    @Subscribe(order=PostOrder.FIRST)
     public void onPlayerChat(PlayerChatEvent playerChatEvent) {
         if (playerChatEvent.getResult().isAllowed()) {
             this.enforceChatRestrictions(playerChatEvent);

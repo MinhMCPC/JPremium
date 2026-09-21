@@ -4,6 +4,7 @@ import com.community.jpremium.common.service.OnlineUserRegistry;
 import com.community.jpremium.common.config.VelocityConfigService;
 import com.community.jpremium.common.model.UserProfileData;
 import com.community.jpremium.velocity.JPremiumVelocity;
+import com.velocitypowered.api.event.PostOrder;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.player.ServerPreConnectEvent;
 import com.velocitypowered.api.proxy.Player;
@@ -19,7 +20,7 @@ public class VelocityServerPreConnectListener {
         this.onlineUserRegistry = jPremiumVelocity.getOnlineUserRegistry();
     }
 
-    @Subscribe
+    @Subscribe(order=PostOrder.FIRST)
     public void onServerPreConnect(ServerPreConnectEvent serverPreConnectEvent) {
         Player player = serverPreConnectEvent.getPlayer();
         UserProfileData userProfile = this.onlineUserRegistry.findByUniqueId(player.getUniqueId()).orElse(null);

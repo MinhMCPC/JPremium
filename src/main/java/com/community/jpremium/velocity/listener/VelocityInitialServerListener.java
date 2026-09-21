@@ -4,6 +4,7 @@ import com.community.jpremium.common.service.OnlineUserRegistry;
 import com.community.jpremium.velocity.service.VelocityServerRoutingService;
 import com.community.jpremium.common.model.UserProfileData;
 import com.community.jpremium.velocity.JPremiumVelocity;
+import com.velocitypowered.api.event.PostOrder;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.player.PlayerChooseInitialServerEvent;
 import com.velocitypowered.api.proxy.Player;
@@ -18,7 +19,7 @@ public class VelocityInitialServerListener {
         this.routingService = jPremiumVelocity.getRoutingService();
     }
 
-    @Subscribe
+    @Subscribe(order=PostOrder.FIRST)
     public void onPlayerChooseInitialServer(PlayerChooseInitialServerEvent playerChooseInitialServerEvent) {
         Player player = playerChooseInitialServerEvent.getPlayer();
         UserProfileData userProfile = this.onlineUserRegistry.findByUniqueId(player.getUniqueId()).orElse(null);

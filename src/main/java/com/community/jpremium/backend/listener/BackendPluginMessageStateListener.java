@@ -55,7 +55,11 @@ implements PluginMessageListener {
                 this.disconnectWithWarning(player, ACCESS_TOKEN_WARNING_TEMPLATE, ReflectionUtils.encodeBase64(receivedAccessToken), player.getName());
                 return;
             }
-            BackendStateRegistry.AuthState playerState = this.stateRegistry.find(player.getUniqueId()).orElseThrow(() -> new NullPointerException("A user object is not exist!"));
+            BackendStateRegistry.AuthState playerState = this.stateRegistry.find(player.getUniqueId()).orElseGet(() -> {
+                BackendStateRegistry.AuthState state = BackendStateRegistry.AuthState.fromPlayer(player);
+                this.stateRegistry.add(state);
+                return state;
+            });
             playerState.setUserState(UserProfileData.AuthState.valueOf(userStateName));
             playerState.setCaptchaCode(captchaCode);
             playerState.setProfileJson(profileJson);
