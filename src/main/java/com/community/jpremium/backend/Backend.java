@@ -85,17 +85,24 @@ extends JavaPlugin {
     }
 
     private void registerBackendListeners() {
-        CaptchaMapRenderer captchaMapRenderer = new CaptchaMapRenderer(this.stateRegistry, this.backendConfig);
-        BackendPluginMessageStateListener pluginMessageListener = new BackendPluginMessageStateListener(this.logger, this.stateRegistry, this.backendConfig, captchaMapRenderer.getCaptchaItem());
-        BackendPlayerLoginListener playerLoginListener = new BackendPlayerLoginListener(this.stateRegistry, this.backendConfig, captchaMapRenderer.getCaptchaItem());
+        BackendPluginMessageStateListener pluginMessageListener = new BackendPluginMessageStateListener(this.logger, this.stateRegistry, this.backendConfig, null);
+        BackendPlayerLoginListener playerLoginListener = new BackendPlayerLoginListener(this.stateRegistry, this.backendConfig, null);
         this.pluginManager.registerEvents(playerLoginListener, this);
         this.messenger.registerIncomingPluginChannel(this, "jpremium:state", pluginMessageListener);
-        if (this.backendConfig.getCaptchaMapSlot() >= 0) {
-            captchaMapRenderer.registerMapRenderer();
-        }
     }
 
     private boolean isVelocityModernMode() {
+        try {
+            Class<?> globalConfigClass = Class.forName("io.papermc.paper.configuration.GlobalConfiguration");
+            Object globalConfig = globalConfigClass.getMethod("get").invoke(null);
+            Object proxies = globalConfig.getClass().getField("proxies").get(globalConfig);
+            Object velocity = proxies.getClass().getField("velocity").get(proxies);
+            Object enabledField = velocity.getClass().getField("enabled").get(velocity);
+            if (enabledField instanceof Boolean b && b) {
+                return true;
+            }
+        } catch (Throwable ignored) {
+        }
         try {
             Object spigotServer = this.getServer().spigot();
             Object paperConfig = spigotServer.getClass().getMethod("getPaperConfig").invoke(spigotServer);

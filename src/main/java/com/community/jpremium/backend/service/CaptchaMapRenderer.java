@@ -83,26 +83,29 @@ extends MapRenderer {
 
     private ItemStack createCaptchaItem() {
         ItemStack itemStack = new ItemStack(this.mapMaterial);
-        MapMeta mapMeta = (MapMeta)itemStack.getItemMeta();
-        try {
-            if (this.legacyMapApi) {
-                ItemStack.class.getMethod("setDurability", Short.TYPE).invoke(itemStack, (short)0);
-            } else {
-                MapMeta.class.getMethod("setMapId", Integer.TYPE).invoke(mapMeta, 0);
+        ItemMeta meta = itemStack.getItemMeta();
+        if (meta instanceof MapMeta mapMeta) {
+            try {
+                if (this.legacyMapApi) {
+                    ItemStack.class.getMethod("setDurability", Short.TYPE).invoke(itemStack, (short)0);
+                } else {
+                    MapMeta.class.getMethod("setMapId", Integer.TYPE).invoke(mapMeta, 0);
+                }
+                itemStack.setItemMeta(mapMeta);
+            }
+            catch (ReflectiveOperationException reflectiveOperationException) {
+                // ignored on custom servers
             }
         }
-        catch (ReflectiveOperationException reflectiveOperationException) {
-            throw new RuntimeException("Could not initialize map metadata", reflectiveOperationException);
-        }
-        itemStack.setItemMeta((ItemMeta)mapMeta);
         return itemStack;
     }
 
     private Material resolveMapMaterial() {
-        return this.legacyMapApi ? Material.MAP : Material.FILLED_MAP;
+        Material filledMap = Material.matchMaterial("FILLED_MAP");
+        return filledMap != null ? filledMap : Material.MAP;
     }
 
     private boolean isLegacyMapApi() {
-        return Integer.parseInt(Bukkit.getServer().getBukkitVersion().split("\\.")[1].split("\\.")[0].split("-")[0]) < 13;
+        return Material.matchMaterial("FILLED_MAP") == null;
     }
 }

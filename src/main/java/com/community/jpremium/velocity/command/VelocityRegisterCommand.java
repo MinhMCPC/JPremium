@@ -30,17 +30,16 @@ extends AbstractVelocityPlayerCommand {
             return;
         }
         boolean confirmPasswordEnabled = this.config.getBoolean("confirmPassword");
-        boolean captchaVerificationEnabled = this.config.getBoolean("verifyCaptchaCode");
         int automaticSessionMinutes = this.config.getInt("automaticSessionTime");
         int maximumProfilesPerAddress = this.config.getInt("maximumUserProfilesPerAddress");
-        int requiredArgumentCount = captchaVerificationEnabled && confirmPasswordEnabled ? 3 : (captchaVerificationEnabled || confirmPasswordEnabled ? 2 : 1);
+        int requiredArgumentCount = confirmPasswordEnabled ? 2 : 1;
         String safePasswordPattern = this.config.getString("safePasswordPattern");
         PasswordHashService.HashAlgorithm hashAlgorithm = this.config.getEnum(PasswordHashService.HashAlgorithm.class, "passwordHashingAlgorithm");
         if (arguments.length != requiredArgumentCount) {
             this.messageService.sendMessageToUser(userProfile, "registerErrorUsage");
             return;
         }
-        if (!arguments[0].equals(arguments[confirmPasswordEnabled ? 1 : 0])) {
+        if (confirmPasswordEnabled && !arguments[0].equals(arguments[1])) {
             this.messageService.sendMessageToUser(userProfile, "registerErrorDifferentPasswords");
             return;
         }
@@ -54,10 +53,6 @@ extends AbstractVelocityPlayerCommand {
         }
         if (this.plugin.getWeakPasswords().contains(arguments[0].toLowerCase())) {
             this.messageService.sendMessageToUser(userProfile, "registerErrorPasswordTooWeak");
-            return;
-        }
-        if (captchaVerificationEnabled && !userProfile.getCaptchaCode().equals(arguments[confirmPasswordEnabled ? 2 : 1])) {
-            this.messageService.sendMessageToUser(userProfile, "registerErrorWrongCaptchaCode");
             return;
         }
         Instant now = Instant.now();

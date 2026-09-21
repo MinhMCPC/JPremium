@@ -126,8 +126,8 @@ implements Runnable {
             this.resolvedPremiumUniqueId = this.profileResolver.fetchProfile(this.username).map(Profile::getUniqueId).orElse(null);
         }
         catch (ResolverException resolverException) {
-            this.plugin.getLogger().warning("Unexpected error occurred during fetching a profile: " + resolverException.getMessage());
-            throw new UserMessageException("preLoginErrorServersDown");
+            this.plugin.getLogger().warning("Unexpected error occurred during fetching a profile for " + this.username + ": " + resolverException.getMessage());
+            this.resolvedPremiumUniqueId = null;
         }
         UserProfileData nicknameProfile = this.userRepository.findByNickname(this.username).orElse(null);
         UserProfileData premiumIdProfile = this.resolvedPremiumUniqueId != null ? this.userRepository.findByPremiumId(this.resolvedPremiumUniqueId).orElse(null) : null;
@@ -136,6 +136,10 @@ implements Runnable {
             this.userRepository.update(nicknameProfile);
         }
         if (premiumIdProfile != null) {
+            boolean detectHandshakePremiumUniqueId = this.config.getBoolean("detectPremiumUniqueIdsInHandshake");
+            if (detectHandshakePremiumUniqueId && !this.hasHandshakePremiumUuid()) {
+                return;
+            }
             String previousNickname = premiumIdProfile.getLastNickname();
             if (this.username.equals(previousNickname)) {
                 this.preLoginEvent.setResult(PreLoginEvent.PreLoginComponentResult.forceOnlineMode());
@@ -145,7 +149,7 @@ implements Runnable {
             if (previousNickname != null) {
                 Player player = this.plugin.getProxyServer().getPlayer(previousNickname).orElse(null);
                 if (player != null && player.isActive()) {
-                throw new UserMessageException("preLoginErrorAlreadyOnline");
+                    throw new UserMessageException("preLoginErrorAlreadyOnline");
                 }
             }
             premiumIdProfile.setLastNickname(this.username);
@@ -165,10 +169,16 @@ implements Runnable {
         UUID resolvedUniqueId = uniqueIdMode.equals(UniqueIdMode.FIXED) ? UUID.randomUUID() : (uniqueIdMode.equals(UniqueIdMode.OFFLINE) ? ProfileDataUtils.createOfflineUuid(this.username) : this.resolvedPremiumUniqueId);
         UUID offlineUniqueId = uniqueIdMode.equals(UniqueIdMode.FIXED) ? UUID.randomUUID() : ProfileDataUtils.createOfflineUuid(this.username);
         String address = this.connection.getRemoteAddress().getAddress().getHostAddress();
-        if (detectHandshakePremiumUniqueId && this.hasHandshakePremiumUuid()) {
-            this.registerPremiumProfile(resolvedUniqueId, address);
+
+        if (detectHandshakePremiumUniqueId) {
+            if (this.hasHandshakePremiumUuid()) {
+                this.registerPremiumProfile(resolvedUniqueId, address);
+            } else {
+                this.registerOfflineProfile(offlineUniqueId);
+            }
             throw new StopProcessingException();
         }
+
         this.resolvedPremiumUniqueId = registerPremiumUsers ? this.resolvedPremiumUniqueId : null;
         if (registerOnWebsite) {
             if (this.resolvedPremiumUniqueId != null) {
@@ -210,22 +220,45 @@ implements Runnable {
     }
 
     private void registerPremiumProfile(UUID uniqueId, String address) {
-        UserProfileData userProfile = new UserProfileData(uniqueId);
-        userProfile.setPremiumId(this.resolvedPremiumUniqueId);
-        userProfile.setLastNickname(this.username);
-        userProfile.setFirstAddress(address);
-        userProfile.setFirstSeen(Instant.now());
+        UserProfileData nicknameProfile = this.userRepository.findByNickname(this.username).orElse(null);
+        if (nicknameProfile != null && !nicknameProfile.getUniqueId().equals(uniqueId)) {
+            nicknameProfile.setLastNickname(null);
+            this.userRepository.update(nicknameProfile);
+        }
+        UserProfileData userProfile = this.userRepository.findByUniqueId(uniqueId).orElse(null);
+        if (userProfile == null) {
+            userProfile = new UserProfileData(uniqueId);
+            userProfile.setPremiumId(this.resolvedPremiumUniqueId);
+            userProfile.setLastNickname(this.username);
+            userProfile.setFirstAddress(address);
+            userProfile.setFirstSeen(Instant.now());
+            this.userRepository.insert(userProfile);
+        } else {
+            userProfile.setPremiumId(this.resolvedPremiumUniqueId);
+            userProfile.setLastNickname(this.username);
+            this.userRepository.update(userProfile);
+        }
         this.preLoginEvent.setResult(PreLoginEvent.PreLoginComponentResult.forceOnlineMode());
-        this.userRepository.insert(userProfile);
         this.plugin.getOnlineUserRegistry().add(userProfile);
         this.plugin.fireEventAsync(new UserEvent.Register(userProfile, null));
     }
 
     private void registerOfflineProfile(UUID uniqueId) {
-        UserProfileData userProfile = new UserProfileData(uniqueId);
-        userProfile.setLastNickname(this.username);
+        UserProfileData nicknameProfile = this.userRepository.findByNickname(this.username).orElse(null);
+        if (nicknameProfile != null && !nicknameProfile.getUniqueId().equals(uniqueId)) {
+            nicknameProfile.setLastNickname(null);
+            this.userRepository.update(nicknameProfile);
+        }
+        UserProfileData userProfile = this.userRepository.findByUniqueId(uniqueId).orElse(null);
+        if (userProfile == null) {
+            userProfile = new UserProfileData(uniqueId);
+            userProfile.setLastNickname(this.username);
+            this.userRepository.insert(userProfile);
+        } else {
+            userProfile.setLastNickname(this.username);
+            this.userRepository.update(userProfile);
+        }
         this.preLoginEvent.setResult(PreLoginEvent.PreLoginComponentResult.forceOfflineMode());
-        this.userRepository.insert(userProfile);
         this.plugin.getOnlineUserRegistry().add(userProfile);
     }
 }

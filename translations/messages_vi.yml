@@ -1,36 +1,20 @@
 #+------------------------------------------------------------------------------------------------------+#
 #|                                                                                                      |#
-#|                                                                                                      |#
 #|                                            J P R E M I U M                                           |#
-#|                                            M E S S A G E S                                           |#
-#|                                                                                                      |#
-#|                                                                                                      |#
-#+------------------------------------------------------------------------------------------------------+#
-
-#+------------------------------------------------------------------------------------------------------+#
-#|                                                                                                      |#
-#|                              You can find some translations at:                                      |#
-#|                https://github.com/Jakubson/JPremiumCleared/tree/master/resources/bungee              |#
+#|                                   BẢN DỊCH TIẾNG VIỆT HOÀN THIỆN                                     |#
 #|                                                                                                      |#
 #+------------------------------------------------------------------------------------------------------+#
 
-#+------------------------------------------------------------------------------------------------------+#
-#|                                                                                                      |#
-#|         The MiniMessage format is supported by starting a message with < on Velocity only!           |#
-#|                        https://docs.advntr.dev/minimessage/format.html                               |#
-#|                                                                                                      |#
-#+------------------------------------------------------------------------------------------------------+#
-
-preLoginErrorInvalidNickname: '&8[&c&l»&8] &7Vui lòng sử dụng tên hiệu khác!'
-preLoginErrorInvalidNicknameCases: '&8[&c&l»&8] &7Vui lòng đổi tên hiệu thành &a%nickname%&7!'
-preLoginErrorAlreadyOnline: '&8[&c&l»&8] &7Bạn đã đang trực tuyến!'
-preLoginErrorServersDown: '&8[&c&l»&8] &7Máy chủ Mojang không phản hồi!'
-preLoginErrorRegisterAtWebsite: '&8[&c&l»&8] &7Vui lòng đăng ký tài khoản tại &amc.example.com&7!'
-preLoginErrorUniqueIdCollision: '&8[&c&l»&8] &7Không thể tạo người dùng cho bạn do xung đột UUID!'
-preLoginErrorBedrockUser: '&8[&c&l»&8] &7Tên hiệu này đã được đặt bởi người chơi Bedrock và chỉ có thể truy cập qua Floodgate!'
-preLoginErrorUserCannotBeLoaded: '&8[&c&l»&8] &7Không thể tải hồ sơ người dùng của bạn!'
-preLoginErrorUserNotLoaded: '&8[&c&l»&8] &7Hồ sơ người dùng của bạn chưa được tải ở giai đoạn đăng nhập trước!'
-preLoginPremiumVerification: '&8[&a&l»&8] &7Tài khoản premium của bạn đã được xác minh! Vui lòng kết nối lại vào máy chủ!'
+preLoginErrorInvalidNickname: '&8[&c&l✖&8] &cTên người dùng không hợp lệ! Vui lòng chọn tên khác.'
+preLoginErrorInvalidNicknameCases: '&8[&c&l✖&8] &cVui lòng đổi tên tài khoản thành &e%nickname%&c!'
+preLoginErrorAlreadyOnline: '&8[&c&l✖&8] &cTài khoản này hiện đang trực tuyến trên máy chủ!'
+preLoginErrorServersDown: '&8[&c&l✖&8] &cMáy chủ xác thực Mojang tạm thời không phản hồi! Vui lòng thử lại sau.'
+preLoginErrorRegisterAtWebsite: '&8[&c&l✖&8] &cVui lòng đăng ký tài khoản tại trang chủ trước khi vào game!'
+preLoginErrorUniqueIdCollision: '&8[&c&l✖&8] &cKhông thể tạo người dùng do trùng lặp UUID!'
+preLoginErrorBedrockUser: '&8[&c&l✖&8] &cTên này thuộc tài khoản Bedrock và chỉ có thể truy cập qua Bedrock Edition!'
+preLoginErrorUserCannotBeLoaded: '&8[&c&l✖&8] &cKhông thể tải dữ liệu hồ sơ người dùng! Vui lòng thử lại.'
+preLoginErrorUserNotLoaded: '&8[&c&l✖&8] &cHồ sơ người dùng chưa được nạp sẵn!'
+preLoginPremiumVerification: '&8[&a&l✔&8] &aXác minh bản quyền Mojang thành công! Đang kết nối...'
 
 # Disconnection redirection feature works only on BungeeCord!
 disconnectRedirectionTitle: ''
@@ -38,401 +22,396 @@ disconnectRedirectionSubTitle: ''
 disconnectRedirectionFadeIn: 0
 disconnectRedirectionStay: 0
 disconnectRedirectionFadeOut: 0
-disconnectRedirectionChat: '&8[&c&l»&8] &7Bạn đã bị ngắt kết nối khỏi máy chủ và được tự động chuyển hướng đến máy chủ khác! Lý do ngắt kết nối là ''%reason%&7''!'
+disconnectRedirectionChat: '&8[&e&l!&8] &7Bạn đã được chuyển hướng sang server khác vì: &c%reason%'
 
-lastServerRedirection: '&8[&a&l»&8] &7Bạn đã được chuyển hướng đến máy chủ bạn đã vào lần trước!'
-lastServerRedirectionError: '&8[&c&l»&8] &7Đã xảy ra lỗi khi kết nối bạn đến máy chủ lần trước!'
+lastServerRedirection: '&8[&a&l✔&8] &aĐang chuyển hướng bạn về cụm máy chủ trước đó...'
+lastServerRedirectionError: '&8[&c&l✖&8] &cKhông thể kết nối đến máy chủ trước đó!'
 
-joinSessionPremiumTitle: '&a&lXin chào %nickname%'
-joinSessionPremiumSubTitle: '&aMột phiên premium!'
-joinSessionPremiumFadeIn: 30
-joinSessionPremiumStay: 100
-joinSessionPremiumFadeOut: 30
-joinSessionPremiumChat: ''
-joinSessionCrackedTitle: '&a&lXin chào %nickname%'
-joinSessionCrackedSubTitle: '&aMột phiên cracked!'
-joinSessionCrackedFadeIn: 30
-joinSessionCrackedStay: 100
-joinSessionCrackedFadeOut: 30
-joinSessionCrackedChat: ''
-joinSessionBedrockTitle: '&a&lXin chào %nickname%'
-joinSessionBedrockSubTitle: '&aMột phiên bedrock!'
-joinSessionBedrockFadeIn: 30
-joinSessionBedrockStay: 100
-joinSessionBedrockFadeOut: 30
-joinSessionBedrockChat: ''
-joinRequireLoginTitle: '&e&lBạn cần sử dụng'
-joinRequireLoginSubTitle: '&6/login <mật khẩu>'
-joinRequireLoginFadeIn: 30
+joinSessionPremiumTitle: '&a&lXÁC THỰC BẢN QUYỀN'
+joinSessionPremiumSubTitle: '&fChào mừng &e%nickname% &7(Tự động đăng nhập)'
+joinSessionPremiumFadeIn: 20
+joinSessionPremiumStay: 60
+joinSessionPremiumFadeOut: 20
+joinSessionPremiumChat: '&8[&a&l✔&8] &aTài khoản bản quyền Mojang đã được tự động đăng nhập!'
+
+joinSessionCrackedTitle: '&a&lPHIÊN TỰ ĐỘNG'
+joinSessionCrackedSubTitle: '&fChào mừng &e%nickname% &ftrở lại!'
+joinSessionCrackedFadeIn: 20
+joinSessionCrackedStay: 60
+joinSessionCrackedFadeOut: 20
+joinSessionCrackedChat: '&8[&a&l✔&8] &aPhiên đăng nhập cũ vẫn còn hiệu lực!'
+
+joinSessionBedrockTitle: '&a&lXÁC THỰC BEDROCK'
+joinSessionBedrockSubTitle: '&fChào mừng &e%nickname% &f(Bedrock Edition)'
+joinSessionBedrockFadeIn: 20
+joinSessionBedrockStay: 60
+joinSessionBedrockFadeOut: 20
+joinSessionBedrockChat: '&8[&a&l✔&8] &aĐã tự động xác thực tài khoản Bedrock!'
+
+joinRequireLoginTitle: '&e&lYÊU CẦU ĐĂNG NHẬP'
+joinRequireLoginSubTitle: '&fGõ &a/login <mật-khẩu> &fđể tiếp tục'
+joinRequireLoginFadeIn: 20
 joinRequireLoginStay: 1200
-joinRequireLoginFadeOut: 30
-joinRequireLoginChat: ''
-joinRequireSecurityLoginTitle: '&e&lBạn cần sử dụng'
-joinRequireSecurityLoginSubTitle: '&6/login <mật khẩu> <mã>'
-joinRequireSecurityLoginFadeIn: 30
-joinRequireSecurityLoginStay: 1200
-joinRequireSecurityLoginFadeOut: 30
-joinRequireSecurityLoginChat: ''
-joinRequireRegisterTitle: '&e&lBạn cần sử dụng'
-joinRequireRegisterSubTitle: '&6/register <mật khẩu> <captcha>'
-joinRequireRegisterFadeIn: 30
-joinRequireRegisterStay: 1200
-joinRequireRegisterFadeOut: 30
-joinRequireRegisterChat: '' # Bạn có thể dùng placeholder '%captcha_code%' để hiển thị mã captcha.
+joinRequireLoginFadeOut: 20
+joinRequireLoginChat: '&8[&b&lAUTH&8] &fVui lòng nhập lệnh &e/login <mật-khẩu> &fđể đăng nhập vào máy chủ!'
 
-loginErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-loginErrorUserPremium: '&8[&c&l»&8] &7Bạn là người chơi premium!'
-loginErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-loginErrorUserAlreadyLogged: '&8[&c&l»&8] &7Bạn đã đăng nhập rồi!'
-loginErrorUsage: '&8[&c&l»&8] &7Cách dùng: /login <mật khẩu>'
-loginErrorSecurityUsage: '&8[&c&l»&8] &7Cách dùng: /login <mật khẩu> <mã>'
-loginErrorAddressBanned: '&8[&c&l»&8] &7Địa chỉ của bạn đã bị cấm 10 phút do vượt quá số lần đăng nhập sai!'
-loginErrorWrongPassword: '&8[&c&l»&8] &7Sai mật khẩu!'
-loginErrorWrongCode: '&8[&c&l»&8] &7Sai mã xác thực!'
-loginErrorTimeElapsed: '&8[&c&l»&8] &7Hết thời gian xác thực!'
-loginBossBarTimerTitle: '&6[&e&l»&6] &eThời gian còn lại để xác thực là &6%time%&es &6[&e&l«&6]'
-loginBossBarTimerColor: YELLOW # PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
-loginBossBarTimerDivision: NOTCHED_6 # PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+joinRequireSecurityLoginTitle: '&e&lXÁC THỰC 2 LỚP (2FA)'
+joinRequireSecurityLoginSubTitle: '&fGõ &a/login <mật-khẩu> <mã-2fa> &fđể tiếp tục'
+joinRequireSecurityLoginFadeIn: 20
+joinRequireSecurityLoginStay: 1200
+joinRequireSecurityLoginFadeOut: 20
+joinRequireSecurityLoginChat: '&8[&b&lAUTH&8] &fTài khoản đã bật 2FA. Vui lòng nhập &e/login <mật-khẩu> <mã-2fa>&f!'
+
+joinRequireRegisterTitle: '&a&lYÊU CẦU ĐĂNG KÝ'
+joinRequireRegisterSubTitle: '&fGõ &a/register <mật-khẩu> <nhập-lại> &fđể tạo tài khoản'
+joinRequireRegisterFadeIn: 20
+joinRequireRegisterStay: 1200
+joinRequireRegisterFadeOut: 20
+joinRequireRegisterChat: '&8[&b&lAUTH&8] &fChào mừng bạn! Vui lòng nhập &a/register <mật-khẩu> <nhập-lại-mật-khẩu> &fđể bắt đầu chơi.'
+
+loginErrorUserBedrock: '&8[&c&l✖&8] &cBạn đang đăng nhập dưới dạng tài khoản Bedrock!'
+loginErrorUserPremium: '&8[&c&l✖&8] &cTài khoản này là bản quyền Mojang, không cần dùng lệnh login!'
+loginErrorUserNotRegistered: '&8[&c&l✖&8] &cTài khoản này chưa được đăng ký! Vui lòng dùng: &e/register <mật-khẩu> <nhập-lại>'
+loginErrorUserAlreadyLogged: '&8[&c&l✖&8] &cBạn đã đăng nhập rồi!'
+loginErrorUsage: '&8[&c&l✖&8] &cCu pháp: &e/login <mật-khẩu>'
+loginErrorSecurityUsage: '&8[&c&l✖&8] &cCu pháp: &e/login <mật-khẩu> <mã-2fa>'
+loginErrorAddressBanned: '&8[&c&l✖&8] &cĐịa chỉ IP của bạn bị tạm khóa 10 phút do nhập sai mật khẩu quá nhiều lần!'
+loginErrorWrongPassword: '&8[&c&l✖&8] &cMật khẩu không chính xác! Vui lòng thử lại.'
+loginErrorWrongCode: '&8[&c&l✖&8] &cMã 2FA không chính xác!'
+loginErrorTimeElapsed: '&8[&c&l✖&8] &cHết thời gian đăng nhập! Bạn đã bị ngắt kết nối.'
+loginBossBarTimerTitle: '&6[&e&l⏳&6] &eThời gian xác thực còn lại: &c%time%s'
+loginBossBarTimerColor: YELLOW
+loginBossBarTimerDivision: NOTCHED_6
 loginActionBarTimer: ''
-loginReminderEmail: '&6[&e&l»&6] &7Bạn chưa có địa chỉ email gắn với tài khoản. Vui lòng gắn ngay bằng lệnh /changemailaddress <mật khẩu> <địa-chỉ-email>!'
-loginReminderSecondFactor: '&6[&e&l»&6] &7Bạn chưa bật xác thực hai yếu tố. Vui lòng bật ngay bằng lệnh /requestsecondfactor!'
-loginSuccessLoggedTitle: '&a&lXin chào %nickname%'
-loginSuccessLoggedSubTitle: '&aĐã đăng nhập'
-loginSuccessLoggedFadeIn: 30
-loginSuccessLoggedStay: 100
-loginSuccessLoggedFadeOut: 30
+loginReminderEmail: '&8[&e&l!&8] &7Bạn chưa liên kết email bảo mật. Dùng &e/changemailaddress <mật-khẩu> <email> &7để bảo vệ tài khoản!'
+loginReminderSecondFactor: '&8[&e&l!&8] &7Bạn chưa kích hoạt bảo mật 2 lớp 2FA. Dùng &e/requestsecondfactor &7để bật!'
+loginSuccessLoggedTitle: '&a&lĐĂNG NHẬP THÀNH CÔNG!'
+loginSuccessLoggedSubTitle: '&fChào mừng &e%nickname% &fđến với máy chủ!'
+loginSuccessLoggedFadeIn: 20
+loginSuccessLoggedStay: 80
+loginSuccessLoggedFadeOut: 20
 loginSuccessLoggedChat: |-
   &f
-  &8[&a&l»&8] &7Nếu bạn không muốn đăng nhập lần sau, vui lòng thực hiện:
-  &f
-  &f  &a&l» &7/premium <mật khẩu> - nếu bạn dùng launcher &achính hãng&7.
-  &f  &a&l» &7/startsession - nếu bạn dùng launcher &ccracked&7.
+  &8[&a&l✔&8] &aĐăng nhập thành công! Chúc bạn chơi game vui vẻ.
   &f
 
-registerErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-registerErrorUserPremium: '&8[&c&l»&8] &7Bạn là người chơi premium!'
-registerErrorUserAlreadyRegistered: '&8[&c&l»&8] &7Bạn đã đăng ký rồi!'
-registerErrorUsage: '&8[&c&l»&8] &7Cách dùng: /register <mật khẩu> <captcha>'
-registerErrorDifferentPasswords: '&8[&c&l»&8] &7Hai mật khẩu không khớp nhau!'
-registerErrorUnsafePassword: '&8[&c&l»&8] &7Mật khẩu phải có ít nhất 6 ký tự!'
-registerErrorPasswordContainsNickname: '&8[&c&l»&8] &7Mật khẩu không được chứa tên hiệu của bạn!'
-registerErrorPasswordTooWeak: '&8[&c&l»&8] &7Mật khẩu quá yếu!'
-registerErrorWrongCaptchaCode: '&8[&c&l»&8] &7Sai mã captcha!'
-registerErrorUserHasTooManyAccounts: '&8[&c&l»&8] &7Bạn có quá nhiều tài khoản!'
-registerErrorTimeElapsed: '&8[&c&l»&8] &7Hết thời gian xác thực!'
-registerBossBarTimerTitle: '&6[&e&l»&6] &eThời gian còn lại để xác thực là &6%time%&es &6[&e&l«&6]'
-registerBossBarTimerColor: YELLOW # PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
-registerBossBarTimerDivision: NOTCHED_6 # PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+registerErrorUserBedrock: '&8[&c&l✖&8] &cBạn đang đăng nhập dưới dạng tài khoản Bedrock!'
+registerErrorUserPremium: '&8[&c&l✖&8] &cTài khoản này là bản quyền Mojang!'
+registerErrorUserAlreadyRegistered: '&8[&c&l✖&8] &cTài khoản này đã được đăng ký! Vui lòng dùng: &e/login <mật-khẩu>'
+registerErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/register <mật-khẩu> <nhập-lại-mật-khẩu>'
+registerErrorDifferentPasswords: '&8[&c&l✖&8] &cHai mật khẩu nhập vào không khớp nhau!'
+registerErrorUnsafePassword: '&8[&c&l✖&8] &cMật khẩu phải chứa ít nhất 6 ký tự an toàn!'
+registerErrorPasswordContainsNickname: '&8[&c&l✖&8] &cMật khẩu không được chứa tên tài khoản của bạn!'
+registerErrorPasswordTooWeak: '&8[&c&l✖&8] &cMật khẩu quá đơn giản (như 123456, password, ...). Vui lòng chọn mật khẩu phức tạp hơn!'
+registerErrorWrongCaptchaCode: '&8[&c&l✖&8] &cMã xác nhận không đúng!'
+registerErrorUserHasTooManyAccounts: '&8[&c&l✖&8] &cĐịa chỉ IP của bạn đã tạo quá số lượng tài khoản cho phép!'
+registerErrorTimeElapsed: '&8[&c&l✖&8] &cHết thời gian đăng ký!'
+registerBossBarTimerTitle: '&6[&e&l⏳&6] &eThời gian đăng ký còn lại: &c%time%s'
+registerBossBarTimerColor: YELLOW
+registerBossBarTimerDivision: NOTCHED_6
 registerActionBarTimer: ''
-registerSuccessRegisteredTitle: '&a&lXin chào %nickname%'
-registerSuccessRegisteredSubTitle: '&aĐã đăng ký'
-registerSuccessRegisteredFadeIn: 30
-registerSuccessRegisteredStay: 100
-registerSuccessRegisteredFadeOut: 30
+registerSuccessRegisteredTitle: '&a&lĐĂNG KÝ THÀNH CÔNG!'
+registerSuccessRegisteredSubTitle: '&fChào mừng &e%nickname% &fđến với máy chủ!'
+registerSuccessRegisteredFadeIn: 20
+registerSuccessRegisteredStay: 80
+registerSuccessRegisteredFadeOut: 20
 registerSuccessRegisteredChat: |
   &f
-  &8[&a&l»&8] &7Chào mừng đến Mạng lưới Máy chủ Minecraft! Dưới đây là các lệnh hữu ích:
-  &f
-  &f  &a&l» &7/unregister <mật khẩu>
-  &f  &a&l» &7/changepassword <mật-khẩu-hiện-tại> <mật-khẩu-mới>
-  &f  &a&l» &7/createpassword <mật khẩu>
-  &f  &a&l» &7/premium <mật khẩu>
-  &f  &a&l» &7/cracked <mật khẩu>
-  &f  &a&l» &7/startsession
-  &f  &a&l» &7/destroysession
-  &f  &a&l» &7/changeemailaddress <mật khẩu> <địa-chỉ-email>
-  &f  &a&l» &7/recoverypassword <địa-chỉ-email>
+  &8[&a&l✔&8] &aĐăng ký tài khoản thành công!
+  &8[&b&lℹ&8] &7Các lệnh hữu ích quản lý tài khoản:
+  &f  &8» &e/changepassword <mật-khẩu-cũ> <mật-khẩu-mới> &7- Đổi mật khẩu
+  &f  &8» &e/premium <mật-khẩu> &7- Kích hoạt chế độ vào nhanh nếu bạn dùng launcher bản quyền
   &f
 
-unregisterErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-unregisterErrorUserPremium: '&8[&c&l»&8] &7Bạn là người chơi premium!'
-unregisterErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-unregisterErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-unregisterErrorUsage: '&8[&c&l»&8] &7Cách dùng: /unregister <mật khẩu>'
-unregisterErrorWrongPassword: '&8[&c&l»&8] &7Sai mật khẩu!'
-unregisterErrorSecondFactorActivated: '&8[&c&l»&8] &7Bạn cần tắt xác thực hai yếu tố trước!'
-unregisterConfirmation: '&8[&e&l»&8] &7Thao tác này sẽ hủy đăng ký tài khoản của bạn trên máy chủ! Nếu bạn chắc chắn muốn tiếp tục, hãy thực hiện lệnh /confirm!'
-unregisterSuccessUnregistered: '&8[&a&l»&8] &7Bạn đã hủy đăng ký!'
+unregisterErrorUserBedrock: '&8[&c&l✖&8] &cBạn là người chơi Bedrock!'
+unregisterErrorUserPremium: '&8[&c&l✖&8] &cTài khoản bản quyền không thể hủy đăng ký!'
+unregisterErrorUserNotRegistered: '&8[&c&l✖&8] &cTài khoản này chưa đăng ký!'
+unregisterErrorUserNotLogged: '&8[&c&l✖&8] &cBạn cần đăng nhập trước khi thực hiện lệnh này!'
+unregisterErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/unregister <mật-khẩu>'
+unregisterErrorWrongPassword: '&8[&c&l✖&8] &cMật khẩu không chính xác!'
+unregisterErrorSecondFactorActivated: '&8[&c&l✖&8] &cBạn cần tắt xác thực 2FA trước khi hủy đăng ký!'
+unregisterConfirmation: '&8[&e&l!&8] &eLệnh này sẽ XÓA tài khoản của bạn! Nhập &c/confirm &eđể xác nhận.'
+unregisterSuccessUnregistered: '&8[&a&l✔&8] &aHủy đăng ký tài khoản thành công!'
 
-changePasswordErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-changePasswordErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-changePasswordErrorUserHasNotPassword: '&8[&c&l»&8] &7Bạn chưa có mật khẩu!'
-changePasswordErrorUsage: '&8[&c&l»&8] &7Cách dùng: /changepassword <mật-khẩu-hiện-tại> <mật-khẩu-mới>'
-changePasswordErrorDifferentNewPasswords: '&8[&c&l»&8] &7Hai mật khẩu mới không khớp nhau!'
-changePasswordErrorUnsafeNewPassword: '&8[&c&l»&8] &7Mật khẩu mới phải có ít nhất 6 ký tự!'
-changePasswordErrorNewPasswordContainsNickname: '&8[&c&l»&8] &7Mật khẩu mới không được chứa tên hiệu của bạn!'
-changePasswordErrorPasswordTooWeak: '&8[&c&l»&8] &7Mật khẩu quá yếu!'
-changePasswordErrorWrongCurrentPassword: '&8[&c&l»&8] &7Sai mật khẩu hiện tại!'
-changePasswordSuccessPasswordChanged: '&8[&a&l»&8] &7Mật khẩu của bạn đã được thay đổi!'
+changePasswordErrorUserNotRegistered: '&8[&c&l✖&8] &cTài khoản chưa đăng ký!'
+changePasswordErrorUserNotLogged: '&8[&c&l✖&8] &cBạn cần đăng nhập trước khi đổi mật khẩu!'
+changePasswordErrorUserHasNotPassword: '&8[&c&l✖&8] &cTài khoản này chưa đặt mật khẩu!'
+changePasswordErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/changepassword <mật-khẩu-cũ> <mật-khẩu-mới>'
+changePasswordErrorDifferentNewPasswords: '&8[&c&l✖&8] &cMật khẩu mới nhập lại không khớp!'
+changePasswordErrorUnsafeNewPassword: '&8[&c&l✖&8] &cMật khẩu mới phải có ít nhất 6 ký tự!'
+changePasswordErrorNewPasswordContainsNickname: '&8[&c&l✖&8] &cMật khẩu mới không được chứa tên của bạn!'
+changePasswordErrorPasswordTooWeak: '&8[&c&l✖&8] &cMật khẩu mới quá đơn giản!'
+changePasswordErrorWrongCurrentPassword: '&8[&c&l✖&8] &cMật khẩu hiện tại không chính xác!'
+changePasswordSuccessPasswordChanged: '&8[&a&l✔&8] &aĐổi mật khẩu thành công! Hãy ghi nhớ mật khẩu mới.'
 
-createPasswordErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-createPasswordErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-createPasswordErrorUserAlreadyHasPassword: '&8[&c&l»&8] &7Bạn đã có mật khẩu rồi!'
-createPasswordErrorUsage: '&8[&c&l»&8] &7Cách dùng: /createpassword <mật khẩu>'
-createPasswordErrorDifferentPasswords: '&8[&c&l»&8] &7Hai mật khẩu không khớp nhau!'
-createPasswordErrorUnsafePassword: '&8[&c&l»&8] &7Mật khẩu phải có ít nhất 6 ký tự!'
-createPasswordErrorPasswordContainsNickname: '&8[&c&l»&8] &7Mật khẩu không được chứa tên hiệu của bạn!'
-createPasswordErrorPasswordTooWeak: '&8[&c&l»&8] &7Mật khẩu quá yếu!'
-createPasswordSuccessPasswordCreated: '&8[&a&l»&8] &7Mật khẩu của bạn đã được tạo!'
+createPasswordErrorUserNotRegistered: '&8[&c&l✖&8] &cTài khoản chưa đăng ký!'
+createPasswordErrorUserNotLogged: '&8[&c&l✖&8] &cBạn cần đăng nhập trước!'
+createPasswordErrorUserAlreadyHasPassword: '&8[&c&l✖&8] &cTài khoản này đã có mật khẩu rồi!'
+createPasswordErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/createpassword <mật-khẩu>'
+createPasswordErrorDifferentPasswords: '&8[&c&l✖&8] &cHai mật khẩu không khớp nhau!'
+createPasswordErrorUnsafePassword: '&8[&c&l✖&8] &cMật khẩu phải có ít nhất 6 ký tự!'
+createPasswordErrorPasswordContainsNickname: '&8[&c&l✖&8] &cMật khẩu không được chứa tên tài khoản!'
+createPasswordErrorPasswordTooWeak: '&8[&c&l✖&8] &cMật khẩu quá yếu!'
+createPasswordSuccessPasswordCreated: '&8[&a&l✔&8] &aTạo mật khẩu thành công!'
 
-premiumErrorFeatureDisabled: '&8[&c&l»&8] &7Máy chủ này không hỗ trợ thay đổi loại tài khoản!'
-premiumErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-premiumErrorUserAlreadyPremium: '&8[&c&l»&8] &7Bạn đã là người chơi premium rồi!'
-premiumErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-premiumErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-premiumErrorUsage: '&8[&c&l»&8] &7Cách dùng: /premium <mật khẩu>'
-premiumErrorWrongPassword: '&8[&c&l»&8] &7Sai mật khẩu!'
-premiumErrorSecondFactorActivated: '&8[&c&l»&8] &7Bạn cần tắt xác thực hai yếu tố trước!'
-premiumErrorServersDown: '&8[&c&l»&8] &7Máy chủ Mojang không phản hồi!'
-premiumErrorDatabaseDown: '&8[&c&l»&8] &7Cơ sở dữ liệu không phản hồi!'
-premiumErrorUserNotPremium: '&8[&c&l»&8] &7Bạn không có tài khoản premium!'
-premiumErrorUserAlreadyExists: '&8[&c&l»&8] &7Người chơi premium với ID premium này đã tồn tại! Vui lòng liên hệ nhân viên để giải quyết!'
-premiumConfirmation: '&8[&e&l»&8] &7Thao tác này sẽ đặt tài khoản của bạn thành premium trên máy chủ! Nếu bạn không có launcher Minecraft chính hãng, bạn sẽ không thể vào máy chủ! Nếu chắc chắn muốn tiếp tục, hãy thực hiện lệnh /confirm!'
-premiumSuccessPremiumTurnedOn: '&8[&a&l»&8] &7Bạn đã là người chơi premium!'
+premiumErrorFeatureDisabled: '&8[&c&l✖&8] &cTính năng này hiện đang tắt!'
+premiumErrorUserBedrock: '&8[&c&l✖&8] &cBạn là người chơi Bedrock!'
+premiumErrorUserAlreadyPremium: '&8[&c&l✖&8] &cTài khoản này đã được đặt làm Premium!'
+premiumErrorUserNotRegistered: '&8[&c&l✖&8] &cBạn chưa đăng ký tài khoản!'
+premiumErrorUserNotLogged: '&8[&c&l✖&8] &cBạn cần đăng nhập trước!'
+premiumErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/premium <mật-khẩu>'
+premiumErrorWrongPassword: '&8[&c&l✖&8] &cMật khẩu không chính xác!'
+premiumErrorSecondFactorActivated: '&8[&c&l✖&8] &cBạn cần tắt xác thực 2FA trước!'
+premiumErrorServersDown: '&8[&c&l✖&8] &cMáy chủ Mojang không phản hồi!'
+premiumErrorDatabaseDown: '&8[&c&l✖&8] &cCơ sở dữ liệu đang bận, vui lòng thử lại sau!'
+premiumErrorUserNotPremium: '&8[&c&l✖&8] &cNick này không sở hữu bản quyền Minecraft trên Mojang!'
+premiumErrorUserAlreadyExists: '&8[&c&l✖&8] &cNgười chơi với ID Premium này đã tồn tại!'
+premiumConfirmation: '&8[&e&l!&8] &eNếu bật Premium, chỉ có người dùng Launcher Bản Quyền mới có thể vào lại nick này! Nhập &c/confirm &eđể đồng ý.'
+premiumSuccessPremiumTurnedOn: '&8[&a&l✔&8] &aKích hoạt chế độ Bản Quyền thành công! Từ giờ bạn sẽ vào game tự động không cần mật khẩu.'
 
-crackedErrorFeatureDisabled: '&8[&c&l»&8] &7Máy chủ này không hỗ trợ thay đổi loại tài khoản!'
-crackedErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-crackedErrorUserNotPremium: '&8[&c&l»&8] &7Bạn không phải người chơi premium!'
-crackedErrorUserHasNotPassword: '&8[&c&l»&8] &7Bạn chưa có mật khẩu!'
-crackedErrorUsage: '&8[&c&l»&8] &7Cách dùng: /cracked <mật khẩu>'
-crackedErrorWrongPassword: '&8[&c&l»&8] &7Sai mật khẩu!'
-crackedConfirmation: '&8[&e&l»&8] &7Thao tác này sẽ đặt tài khoản của bạn thành cracked trên máy chủ! Nếu chắc chắn muốn tiếp tục, hãy thực hiện lệnh /confirm!'
-crackedSuccessCrackedTurnedOn: '&8[&a&l»&8] &7Bạn đã là người chơi cracked!'
+crackedErrorFeatureDisabled: '&8[&c&l✖&8] &cTính năng này hiện đang tắt!'
+crackedErrorUserBedrock: '&8[&c&l✖&8] &cBạn là người chơi Bedrock!'
+crackedErrorUserNotPremium: '&8[&c&l✖&8] &cTài khoản này đang ở chế độ Offline/Cracked!'
+crackedErrorUserHasNotPassword: '&8[&c&l✖&8] &cBạn chưa đặt mật khẩu!'
+crackedErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/cracked <mật-khẩu>'
+crackedErrorWrongPassword: '&8[&c&l✖&8] &cMật khẩu không chính xác!'
+crackedConfirmation: '&8[&e&l!&8] &eChuyển tài khoản về chế độ Offline/Cracked? Nhập &c/confirm &eđể đồng ý.'
+crackedSuccessCrackedTurnedOn: '&8[&a&l✔&8] &aChuyển sang chế độ Offline/Cracked thành công!'
 
-startSessionErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-startSessionErrorUserPremium: '&8[&c&l»&8] &7Bạn là người chơi premium!'
-startSessionErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-startSessionErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-startSessionErrorUserHasAlreadySession: '&8[&c&l»&8] &7Bạn đã có phiên hoạt động rồi!'
-startSessionErrorUsage: '&8[&c&l»&8] &7Cách dùng: /startsession'
-startSessionSuccessSessionStarted: '&8[&a&l»&8] &7Phiên của bạn đã được bắt đầu!'
+startSessionErrorUserBedrock: '&8[&c&l✖&8] &cBạn là người chơi Bedrock!'
+startSessionErrorUserPremium: '&8[&c&l✖&8] &cTài khoản Premium không cần tạo phiên riêng!'
+startSessionErrorUserNotRegistered: '&8[&c&l✖&8] &cBạn chưa đăng ký!'
+startSessionErrorUserNotLogged: '&8[&c&l✖&8] &cBạn chưa đăng nhập!'
+startSessionErrorUserHasAlreadySession: '&8[&c&l✖&8] &cPhiên đăng nhập tự động đang hoạt động!'
+startSessionErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/startsession'
+startSessionSuccessSessionStarted: '&8[&a&l✔&8] &aĐã lưu phiên đăng nhập trên thiết bị này!'
 
-destroySessionErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-destroySessionErrorUserPremium: '&8[&c&l»&8] &7Bạn là người chơi premium!'
-destroySessionErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-destroySessionErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-destroySessionErrorUserHasNotSession: '&8[&c&l»&8] &7Bạn không có phiên hoạt động!'
-destroySessionErrorUsage: '&8[&c&l»&8] &7Cách dùng: /destroysession'
-destroySessionSuccessSessionDestroyed: '&8[&a&l»&8] &7Phiên của bạn đã được hủy!'
+destroySessionErrorUserBedrock: '&8[&c&l✖&8] &cBạn là người chơi Bedrock!'
+destroySessionErrorUserPremium: '&8[&c&l✖&8] &cTài khoản Premium không có phiên này!'
+destroySessionErrorUserNotRegistered: '&8[&c&l✖&8] &cBạn chưa đăng ký!'
+destroySessionErrorUserNotLogged: '&8[&c&l✖&8] &cBạn chưa đăng nhập!'
+destroySessionErrorUserHasNotSession: '&8[&c&l✖&8] &cBạn chưa bật phiên đăng nhập tự động!'
+destroySessionErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/destroysession'
+destroySessionSuccessSessionDestroyed: '&8[&a&l✔&8] &aĐã xóa phiên đăng nhập tự động!'
 
-changeEmailAddressErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-changeEmailAddressErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-changeEmailAddressErrorUserHasNotPassword: '&8[&c&l»&8] &7Bạn chưa có mật khẩu!'
-changeEmailAddressErrorUsage: '&8[&c&l»&8] &7Cách dùng: /changeemailaddress <mật khẩu> <địa-chỉ-email>'
-changeEmailAddressErrorWrongPassword: '&8[&c&l»&8] &7Sai mật khẩu!'
-changeEmailAddressErrorWrongEmailAddress: '&8[&c&l»&8] &7Địa chỉ email không hợp lệ!'
-changeEmailAddressSuccessEmailAddressChanged: '&8[&a&l»&8] &7Địa chỉ email của bạn đã được thay đổi!'
+changeEmailAddressErrorUserNotRegistered: '&8[&c&l✖&8] &cBạn chưa đăng ký!'
+changeEmailAddressErrorUserNotLogged: '&8[&c&l✖&8] &cBạn chưa đăng nhập!'
+changeEmailAddressErrorUserHasNotPassword: '&8[&c&l✖&8] &cBạn chưa có mật khẩu!'
+changeEmailAddressErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/changeemailaddress <mật-khẩu> <địa-chỉ-email>'
+changeEmailAddressErrorWrongPassword: '&8[&c&l✖&8] &cMật khẩu không chính xác!'
+changeEmailAddressErrorWrongEmailAddress: '&8[&c&l✖&8] &cĐịa chỉ email không hợp lệ!'
+changeEmailAddressSuccessEmailAddressChanged: '&8[&a&l✔&8] &aLiên kết email thành công!'
 
-requestPasswordRecoveryErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-requestPasswordRecoveryErrorUserHasNotPassword: '&8[&c&l»&8] &7Bạn chưa có mật khẩu!'
-requestPasswordRecoveryErrorUserHasNotEmailAddress: '&8[&c&l»&8] &7Bạn chưa có địa chỉ email!'
-requestPasswordRecoveryErrorUsage: '&8[&c&l»&8] &7Cách dùng: /requestpasswordrecovery <địa-chỉ-email>'
-requestPasswordRecoveryErrorWrongEmailAddress: '&8[&c&l»&8] &7Địa chỉ email không hợp lệ!'
-requestPasswordRecoveryErrorRecoveringDelay: '&8[&c&l»&8] &7Bạn chỉ có thể khôi phục mật khẩu mỗi 1 giờ!'
-requestPasswordRecoverySuccessRequestedPasswordRecovery: '&8[&a&l»&8] &7Yêu cầu khôi phục mật khẩu của bạn đã được gửi!'
+requestPasswordRecoveryErrorUserNotRegistered: '&8[&c&l✖&8] &cTài khoản chưa đăng ký!'
+requestPasswordRecoveryErrorUserHasNotPassword: '&8[&c&l✖&8] &cTài khoản chưa có mật khẩu!'
+requestPasswordRecoveryErrorUserHasNotEmailAddress: '&8[&c&l✖&8] &cTài khoản chưa liên kết email!'
+requestPasswordRecoveryErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/requestpasswordrecovery <địa-chỉ-email>'
+requestPasswordRecoveryErrorWrongEmailAddress: '&8[&c&l✖&8] &cEmail không khớp với email đã đăng ký!'
+requestPasswordRecoveryErrorRecoveringDelay: '&8[&c&l✖&8] &cBạn chỉ có thể gửi yêu cầu lấy lại mật khẩu sau mỗi 1 giờ!'
+requestPasswordRecoverySuccessRequestedPasswordRecovery: '&8[&a&l✔&8] &aMã khôi phục đã được gửi tới email của bạn!'
 
-confirmPasswordRecoveryErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-confirmPasswordRecoveryErrorUserHasNotRecoveryCode: '&8[&c&l»&8] &7Bạn không có mã khôi phục!'
-confirmPasswordRecoveryErrorUsage: '&8[&c&l»&8] &7Cách dùng: /confirmpasswordrecovery <mã-khôi-phục> <mật-khẩu-mới>'
-confirmPasswordRecoveryErrorDifferentNewPasswords: '&8[&c&l»&8] &7Hai mật khẩu mới không khớp nhau!'
-confirmPasswordRecoveryErrorUnsafeNewPassword: '&8[&c&l»&8] &7Mật khẩu mới phải có ít nhất 6 ký tự!'
-confirmPasswordRecoveryErrorNewPasswordContainsNickname: '&8[&c&l»&8] &7Mật khẩu không được chứa tên hiệu của bạn!'
-confirmPasswordRecoveryErrorPasswordTooWeak: '&8[&c&l»&8] &7Mật khẩu quá yếu!'
-confirmPasswordRecoveryErrorWrongRecoveryCode: '&8[&c&l»&8] &7Sai mã khôi phục!'
-confirmPasswordRecoverySuccessConfirmedPasswordRecovery: '&8[&a&l»&8] &7Yêu cầu khôi phục mật khẩu của bạn đã được xác nhận!'
+confirmPasswordRecoveryErrorUserNotRegistered: '&8[&c&l✖&8] &cTài khoản chưa đăng ký!'
+confirmPasswordRecoveryErrorUserHasNotRecoveryCode: '&8[&c&l✖&8] &cKhông tìm thấy yêu cầu khôi phục nào đang chờ!'
+confirmPasswordRecoveryErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/confirmpasswordrecovery <mã-xác-nhận> <mật-khẩu-mới>'
+confirmPasswordRecoveryErrorDifferentNewPasswords: '&8[&c&l✖&8] &cMật khẩu mới không khớp!'
+confirmPasswordRecoveryErrorUnsafeNewPassword: '&8[&c&l✖&8] &cMật khẩu phải có ít nhất 6 ký tự!'
+confirmPasswordRecoveryErrorNewPasswordContainsNickname: '&8[&c&l✖&8] &cMật khẩu không được chứa tên tài khoản!'
+confirmPasswordRecoveryErrorPasswordTooWeak: '&8[&c&l✖&8] &cMật khẩu quá yếu!'
+confirmPasswordRecoveryErrorWrongRecoveryCode: '&8[&c&l✖&8] &cMã xác nhận không chính xác!'
+confirmPasswordRecoverySuccessConfirmedPasswordRecovery: '&8[&a&l✔&8] &aKhôi phục mật khẩu thành công! Bạn có thể đăng nhập bằng mật khẩu mới.'
 
-requestSecondFactorErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-requestSecondFactorErrorUserPremium: '&8[&c&l»&8] &7Bạn là người chơi premium!'
-requestSecondFactorErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-requestSecondFactorErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-requestSecondFactorErrorUserHasAlreadySecondFactor: '&8[&c&l»&8] &7Bạn đã có xác thực hai yếu tố rồi!'
-requestSecondFactorErrorUsage: '&8[&c&l»&8] &7Cách dùng: /requestsecondfactor'
-requestSecondFactorSuccessSecondFactorRequested: '&8[&a&l»&8] &7Vui lòng truy cập trang web này &o[nhấn vào tin nhắn này] &7và quét mã QR bằng ứng dụng của bạn! Sau đó thực hiện lệnh /activatesecondfactor <mật khẩu> <mã>!'
+requestSecondFactorErrorUserBedrock: '&8[&c&l✖&8] &cBạn là người chơi Bedrock!'
+requestSecondFactorErrorUserPremium: '&8[&c&l✖&8] &cTài khoản Premium không cần 2FA!'
+requestSecondFactorErrorUserNotRegistered: '&8[&c&l✖&8] &cBạn chưa đăng ký!'
+requestSecondFactorErrorUserNotLogged: '&8[&c&l✖&8] &cBạn chưa đăng nhập!'
+requestSecondFactorErrorUserHasAlreadySecondFactor: '&8[&c&l✖&8] &cBạn đã kích hoạt 2FA rồi!'
+requestSecondFactorErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/requestsecondfactor'
+requestSecondFactorSuccessSecondFactorRequested: '&8[&a&l✔&8] &7Nhấp vào liên kết sau để lấy mã QR: &b[MỞ LIÊN KẾT 2FA] &7sau đó dùng lệnh &e/activatesecondfactor <mật-khẩu> <mã-app>&7!'
 
-activateSecondFactorErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-activateSecondFactorErrorUserPremium: '&8[&c&l»&8] &7Bạn là người chơi premium!'
-activateSecondFactorErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-activateSecondFactorErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-activateSecondFactorErrorUserHasAlreadySecondFactor: '&8[&c&l»&8] &7Bạn đã có xác thực hai yếu tố rồi!'
-activateSecondFactorErrorUserNotRequestedSecondFactor: '&8[&c&l»&8] &7Bạn chưa yêu cầu xác thực hai yếu tố!'
-activateSecondFactorErrorUsage: '&8[&c&l»&8] &7Cách dùng: /activatesecondfactor <mật khẩu> <mã>'
-activateSecondFactorErrorWrongPassword: '&8[&c&l»&8] &7Sai mật khẩu!'
-activateSecondFactorErrorWrongCode: '&8[&c&l»&8] &7Sai mã xác thực!'
-activateSecondFactorSuccessSecondFactorActivated: '&8[&a&l»&8] &7Xác thực hai yếu tố đã được kích hoạt!'
+activateSecondFactorErrorUserBedrock: '&8[&c&l✖&8] &cBạn là người chơi Bedrock!'
+activateSecondFactorErrorUserPremium: '&8[&c&l✖&8] &cTài khoản Premium không cần 2FA!'
+activateSecondFactorErrorUserNotRegistered: '&8[&c&l✖&8] &cBạn chưa đăng ký!'
+activateSecondFactorErrorUserNotLogged: '&8[&c&l✖&8] &cBạn chưa đăng nhập!'
+activateSecondFactorErrorUserHasAlreadySecondFactor: '&8[&c&l✖&8] &cBạn đã bật 2FA rồi!'
+activateSecondFactorErrorUserNotRequestedSecondFactor: '&8[&c&l✖&8] &cBạn chưa yêu cầu thiết lập 2FA!'
+activateSecondFactorErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/activatesecondfactor <mật-khẩu> <mã-app>'
+activateSecondFactorErrorWrongPassword: '&8[&c&l✖&8] &cMật khẩu không chính xác!'
+activateSecondFactorErrorWrongCode: '&8[&c&l✖&8] &cMã 2FA từ ứng dụng không chính xác!'
+activateSecondFactorSuccessSecondFactorActivated: '&8[&a&l✔&8] &aKích hoạt bảo mật 2 lớp 2FA thành công!'
 
-deactivateSecondFactorErrorUserBedrock: '&8[&c&l»&8] &7Bạn là người chơi bedrock!'
-deactivateSecondFactorErrorUserPremium: '&8[&c&l»&8] &7Bạn là người chơi premium!'
-deactivateSecondFactorErrorUserNotRegistered: '&8[&c&l»&8] &7Bạn chưa đăng ký!'
-deactivateSecondFactorErrorUserNotLogged: '&8[&c&l»&8] &7Bạn chưa đăng nhập!'
-deactivateSecondFactorErrorUserHasNotSecondFactor: '&8[&c&l»&8] &7Bạn không có xác thực hai yếu tố!'
-deactivateSecondFactorErrorUsage: '&8[&c&l»&8] &7Cách dùng: /deactivatesecondfactor <mật khẩu> <mã>'
-deactivateSecondFactorErrorWrongPassword: '&8[&c&l»&8] &7Sai mật khẩu!'
-deactivateSecondFactorErrorWrongCode: '&8[&c&l»&8] &7Sai mã xác thực!'
-deactivateSecondFactorSuccessSecondFactorDeactivated: '&8[&a&l»&8] &7Xác thực hai yếu tố đã được vô hiệu hóa!'
+deactivateSecondFactorErrorUserBedrock: '&8[&c&l✖&8] &cBạn là người chơi Bedrock!'
+deactivateSecondFactorErrorUserPremium: '&8[&c&l✖&8] &cTài khoản Premium không cần 2FA!'
+deactivateSecondFactorErrorUserNotRegistered: '&8[&c&l✖&8] &cBạn chưa đăng ký!'
+deactivateSecondFactorErrorUserNotLogged: '&8[&c&l✖&8] &cBạn chưa đăng nhập!'
+deactivateSecondFactorErrorUserHasNotSecondFactor: '&8[&c&l✖&8] &cBạn chưa kích hoạt 2FA!'
+deactivateSecondFactorErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/deactivatesecondfactor <mật-khẩu> <mã-app>'
+deactivateSecondFactorErrorWrongPassword: '&8[&c&l✖&8] &cMật khẩu không chính xác!'
+deactivateSecondFactorErrorWrongCode: '&8[&c&l✖&8] &cMã 2FA không chính xác!'
+deactivateSecondFactorSuccessSecondFactorDeactivated: '&8[&a&l✔&8] &aĐã tắt bảo mật 2 lớp 2FA!'
 
-confirmNotWaiting: '&8[&c&l»&8] &7Bạn không có thao tác nào cần xác nhận!'
-forceForbiddenProtectedAccount: '&8[&c&l»&8] &7Bạn không thể thực hiện lệnh nhân viên cho người chơi này!'
+confirmNotWaiting: '&8[&c&l✖&8] &cKhông có thao tác nào đang chờ xác nhận!'
+forceForbiddenProtectedAccount: '&8[&c&l✖&8] &cKhông thể thao tác trên tài khoản được bảo vệ này!'
 
-forceLoginErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcelogin <tên hiệu|uuid>'
-forceLoginErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceLoginErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceLoginErrorUserPremium: '&8[&c&l»&8] &7Người dùng là người chơi premium!'
-forceLoginErrorUserNotOnline: '&8[&c&l»&8] &7Người dùng không trực tuyến!'
-forceLoginErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceLoginErrorUserAlreadyLogged: '&8[&c&l»&8] &7Người dùng đã đăng nhập rồi!'
-forceLoginSuccessLogged: '&8[&a&l»&8] &7Người dùng đã được đăng nhập!'
+forceLoginErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcelogin <tên-người-chơi|uuid>'
+forceLoginErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceLoginErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceLoginErrorUserPremium: '&8[&c&l✖&8] &cNgười dùng là tài khoản Premium!'
+forceLoginErrorUserNotOnline: '&8[&c&l✖&8] &cNgười chơi hiện không online!'
+forceLoginErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười chơi chưa đăng ký!'
+forceLoginErrorUserAlreadyLogged: '&8[&c&l✖&8] &cNgười chơi đã đăng nhập rồi!'
+forceLoginSuccessLogged: '&8[&a&l✔&8] &aĐã ép đăng nhập cho người chơi!'
 
-forceRegisterErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forceregister <tên hiệu|uuid> <mật khẩu>'
-forceRegisterErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceRegisterErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceRegisterErrorUserPremium: '&8[&c&l»&8] &Người dùng là người chơi premium!'
-forceRegisterErrorUserAlreadyRegistered: '&8[&c&l»&8] &7Người dùng đã đăng ký rồi!'
-forceRegisterSuccessRegistered: '&8[&a&l»&8] &7Người dùng đã được đăng ký!'
+forceRegisterErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forceregister <tên-người-chơi|uuid> <mật-khẩu>'
+forceRegisterErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceRegisterErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceRegisterErrorUserPremium: '&8[&c&l✖&8] &cNgười dùng là tài khoản Premium!'
+forceRegisterErrorUserAlreadyRegistered: '&8[&c&l✖&8] &cNgười dùng này đã đăng ký rồi!'
+forceRegisterSuccessRegistered: '&8[&a&l✔&8] &aĐã tạo tài khoản thành công cho người chơi!'
 
-forceUnregisterErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forceunregister <tên hiệu|uuid>'
-forceUnregisterErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceUnregisterErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceUnregisterErrorUserPremium:  '&8[&c&l»&8] &7Người dùng là người chơi premium!'
-forceUnregisterErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceUnregisterSuccessUnregistered: '&8[&a&l»&8] &7Người dùng đã bị hủy đăng ký!'
+forceUnregisterErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forceunregister <tên-người-chơi|uuid>'
+forceUnregisterErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceUnregisterErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceUnregisterErrorUserPremium: '&8[&c&l✖&8] &cNgười dùng là tài khoản Premium!'
+forceUnregisterErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceUnregisterSuccessUnregistered: '&8[&a&l✔&8] &aĐã xóa đăng ký người dùng!'
 
-forceChangePasswordErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcechangepassword <tên hiệu|uuid> <mật khẩu>'
-forceChangePasswordErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceChangePasswordErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceChangePasswordErrorUserHasNotPassword: '&8[&c&l»&8] &7Người dùng chưa có mật khẩu!'
-forceChangePasswordSuccessPasswordChanged: '&8[&a&l»&8] &7Mật khẩu của người dùng đã được thay đổi!'
+forceChangePasswordErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcechangepassword <tên-người-chơi|uuid> <mật-khẩu-mới>'
+forceChangePasswordErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceChangePasswordErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceChangePasswordErrorUserHasNotPassword: '&8[&c&l✖&8] &cNgười dùng chưa có mật khẩu!'
+forceChangePasswordSuccessPasswordChanged: '&8[&a&l✔&8] &aĐã đổi mật khẩu cho người chơi!'
 
-forceCreatePasswordErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcecreatepassword <tên hiệu|uuid> <mật khẩu>'
-forceCreatePasswordErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceCreatePasswordErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceCreatePasswordErrorUserAlreadyHasPassword: '&8[&c&l»&8] &7Người dùng đã có mật khẩu rồi!'
-forceCreatePasswordSuccessPasswordCreated: '&8[&a&l»&8] &7Mật khẩu của người dùng đã được tạo!'
+forceCreatePasswordErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcecreatepassword <tên-người-chơi|uuid> <mật-khẩu>'
+forceCreatePasswordErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceCreatePasswordErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceCreatePasswordErrorUserAlreadyHasPassword: '&8[&c&l✖&8] &cNgười dùng đã có mật khẩu!'
+forceCreatePasswordSuccessPasswordCreated: '&8[&a&l✔&8] &aĐã tạo mật khẩu cho người chơi!'
 
-forcePremiumErrorFeatureDisabled: '&8[&c&l»&8] &7Máy chủ này không hỗ trợ thay đổi loại tài khoản!'
-forcePremiumErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcepremium <tên hiệu|uuid>'
-forcePremiumErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forcePremiumErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forcePremiumErrorUserAlreadyPremium: '&8[&c&l»&8] &7Người dùng đã là người chơi premium rồi!'
-forcePremiumErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forcePremiumErrorSecondFactorActivated: '&8[&c&l»&8] &7Người dùng cần tắt xác thực hai yếu tố trước!'
-forcePremiumErrorServersDown: '&8[&c&l»&8] &7Máy chủ Mojang không phản hồi!'
-forcePremiumErrorDatabaseDown: '&8[&c&l»&8] &7Cơ sở dữ liệu không phản hồi!'
-forcePremiumErrorUserNotPremium: '&8[&c&l»&8] &7Người dùng không có tài khoản premium!'
-forcePremiumErrorUserAlreadyExists: '&8[&c&l»&8] &7Người chơi premium với ID premium này đã tồn tại!'
-forcePremiumSuccessPremiumTurnedOn: '&8[&a&l»&8] &7Người dùng đã là người chơi premium!'
+forcePremiumErrorFeatureDisabled: '&8[&c&l✖&8] &cTính năng này hiện đang tắt!'
+forcePremiumErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcepremium <tên-người-chơi|uuid>'
+forcePremiumErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forcePremiumErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forcePremiumErrorUserAlreadyPremium: '&8[&c&l✖&8] &cNgười dùng đã là Premium!'
+forcePremiumErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forcePremiumErrorSecondFactorActivated: '&8[&c&l✖&8] &cNgười dùng cần tắt 2FA trước!'
+forcePremiumErrorServersDown: '&8[&c&l✖&8] &cMáy chủ Mojang không phản hồi!'
+forcePremiumErrorDatabaseDown: '&8[&c&l✖&8] &cCơ sở dữ liệu đang bận!'
+forcePremiumErrorUserNotPremium: '&8[&c&l✖&8] &cTên này không có bản quyền trên Mojang!'
+forcePremiumErrorUserAlreadyExists: '&8[&c&l✖&8] &cNgười chơi với ID Premium này đã tồn tại!'
+forcePremiumSuccessPremiumTurnedOn: '&8[&a&l✔&8] &aĐã chuyển người dùng sang chế độ Premium!'
 
-forceCrackedErrorFeatureDisabled: '&8[&c&l»&8] &7Máy chủ này không hỗ trợ thay đổi loại tài khoản!'
-forceCrackedErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcecracked <tên hiệu|uuid>'
-forceCrackedErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceCrackedErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceCrackedUserAlreadyCracked: '&8[&c&l»&8] &7Người dùng đã là người chơi cracked rồi!'
-forceCrackedUserHasNotPassword: '&8[&c&l»&8] &7Người dùng chưa có mật khẩu!'
-forceCrackedSuccessCrackedTurnedOn: '&8[&a&l»&8] &7Người dùng đã là người chơi cracked!'
+forceCrackedErrorFeatureDisabled: '&8[&c&l✖&8] &cTính năng này hiện đang tắt!'
+forceCrackedErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcecracked <tên-người-chơi|uuid>'
+forceCrackedErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceCrackedErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceCrackedUserAlreadyCracked: '&8[&c&l✖&8] &cNgười dùng đã ở chế độ Cracked!'
+forceCrackedUserHasNotPassword: '&8[&c&l✖&8] &cNgười dùng chưa có mật khẩu!'
+forceCrackedSuccessCrackedTurnedOn: '&8[&a&l✔&8] &aĐã chuyển người dùng sang chế độ Offline/Cracked!'
 
-forceStartSessionErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcestartsession <tên hiệu|uuid>'
-forceStartSessionErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceStartSessionErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceStartSessionErrorUserPremium:  '&8[&c&l»&8] &7Người dùng là người chơi premium!'
-forceStartSessionErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceStartSessionErrorUserNotLogged: '&8[&c&l»&8] &7Người dùng chưa đăng nhập!'
-forceStartSessionErrorUserAlreadyHasSession: '&8[&c&l»&8] &7Người dùng đã có phiên hoạt động rồi!'
-forceStartSessionErrorWrongTime: '&8[&c&l»&8] &7Thời gian phiên không hợp lệ!'
-forceStartSessionSuccessSessionStarted: '&8[&a&l»&8] &7Phiên của người dùng đã được bắt đầu!'
+forceStartSessionErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcestartsession <tên-người-chơi|uuid>'
+forceStartSessionErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceStartSessionErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceStartSessionErrorUserPremium: '&8[&c&l✖&8] &cNgười dùng là tài khoản Premium!'
+forceStartSessionErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceStartSessionErrorUserNotLogged: '&8[&c&l✖&8] &cNgười dùng chưa đăng nhập!'
+forceStartSessionErrorUserAlreadyHasSession: '&8[&c&l✖&8] &cNgười dùng đã có phiên hoạt động!'
+forceStartSessionErrorWrongTime: '&8[&c&l✖&8] &cThời gian phiên không hợp lệ!'
+forceStartSessionSuccessSessionStarted: '&8[&a&l✔&8] &aĐã tạo phiên đăng nhập cho người dùng!'
 
-forceDestroySessionErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcedestroysession <tên hiệu|uuid>'
-forceDestroySessionErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceDestroySessionErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceDestroySessionErrorUserPremium:  '&8[&c&l»&8] &7Người dùng là người chơi premium!'
-forceDestroySessionErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceDestroySessionErrorUserHasNotSession: '&8[&c&l»&8] &7Người dùng không có phiên hoạt động!'
-forceDestroySessionSuccessSessionDestroyed: '&8[&a&l»&8] &7Phiên của người dùng đã được hủy!'
+forceDestroySessionErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcedestroysession <tên-người-chơi|uuid>'
+forceDestroySessionErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceDestroySessionErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceDestroySessionErrorUserPremium: '&8[&c&l✖&8] &cNgười dùng là tài khoản Premium!'
+forceDestroySessionErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceDestroySessionErrorUserHasNotSession: '&8[&c&l✖&8] &cNgười dùng không có phiên hoạt động!'
+forceDestroySessionSuccessSessionDestroyed: '&8[&a&l✔&8] &aĐã xóa phiên đăng nhập của người dùng!'
 
-forceChangeEmailAddressErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcechangemail <tên hiệu|uuid> <địa-chỉ-email>'
-forceChangeEmailAddressErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceChangeEmailAddressErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceChangeEmailAddressErrorUserHasNotPassword: '&8[&c&l»&8] &7Người dùng chưa có mật khẩu!'
-forceChangeEmailAddressErrorWrongEmailAddress: '&8[&c&l»&8] &7Địa chỉ email không hợp lệ!'
-forceChangeEmailAddressSuccessEmailAddressChanged: '&8[&a&l»&8] &7Địa chỉ email của người dùng đã được thay đổi!'
+forceChangeEmailAddressErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcechangemail <tên-người-chơi|uuid> <email>'
+forceChangeEmailAddressErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceChangeEmailAddressErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceChangeEmailAddressErrorUserHasNotPassword: '&8[&c&l✖&8] &cNgười dùng chưa có mật khẩu!'
+forceChangeEmailAddressErrorWrongEmailAddress: '&8[&c&l✖&8] &cEmail không hợp lệ!'
+forceChangeEmailAddressSuccessEmailAddressChanged: '&8[&a&l✔&8] &aĐã đổi email cho người dùng!'
 
-forceRecoveryPasswordErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcerecoverypassword <tên hiệu|uuid>'
-forceRecoveryPasswordErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceRecoveryPasswordErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceRecoveryPasswordErrorUserHasNotPassword: '&8[&c&l»&8] &7Người dùng chưa có mật khẩu!'
-forceRecoveryPasswordErrorUserHasNotEmailAddress: '&8[&c&l»&8] &7Người dùng chưa có địa chỉ email!'
-forceRecoveryPasswordSuccessPasswordRecovered: '&8[&a&l»&8] &7Mật khẩu của người dùng đã được khôi phục!'
+forceRecoveryPasswordErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcerecoverypassword <tên-người-chơi|uuid>'
+forceRecoveryPasswordErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceRecoveryPasswordErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceRecoveryPasswordErrorUserHasNotPassword: '&8[&c&l✖&8] &cNgười dùng chưa có mật khẩu!'
+forceRecoveryPasswordErrorUserHasNotEmailAddress: '&8[&c&l✖&8] &cNgười dùng chưa có email!'
+forceRecoveryPasswordSuccessPasswordRecovered: '&8[&a&l✔&8] &aĐã tạo liên kết khôi phục mật khẩu!'
 
-forceRequestPasswordRecoveryErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcerequestpasswordrecovery <tên hiệu|uuid>'
-forceRequestPasswordRecoveryErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceRequestPasswordRecoveryErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceRequestPasswordRecoveryErrorUserHasNotPassword: '&8[&c&l»&8] &7Người dùng chưa có mật khẩu!'
-forceRequestPasswordRecoveryErrorUserHasNotEmailAddress: '&8[&c&l»&8] &7Người dùng chưa có địa chỉ email!'
-forceRequestPasswordRecoverySuccessRequestedPasswordRecovery: '&8[&a&l»&8] &7Yêu cầu khôi phục mật khẩu của người dùng đã được gửi!'
+forceRequestPasswordRecoveryErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcerequestpasswordrecovery <tên-người-chơi|uuid>'
+forceRequestPasswordRecoveryErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceRequestPasswordRecoveryErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceRequestPasswordRecoveryErrorUserHasNotPassword: '&8[&c&l✖&8] &cNgười dùng chưa có mật khẩu!'
+forceRequestPasswordRecoveryErrorUserHasNotEmailAddress: '&8[&c&l✖&8] &cNgười dùng chưa có email!'
+forceRequestPasswordRecoverySuccessRequestedPasswordRecovery: '&8[&a&l✔&8] &aĐã gửi yêu cầu khôi phục mật khẩu!'
 
-forceConfirmPasswordRecoveryErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcerconfirmpasswordrecovery <tên hiệu|uuid> <mật-khẩu-mới>'
-forceConfirmPasswordRecoveryErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceConfirmPasswordRecoveryErrorUserHasNotRecoveryCode: '&8[&c&l»&8] &7Người dùng không có mã khôi phục!'
-forceConfirmPasswordRecoverySuccessConfirmedPasswordRecovery: '&8[&a&l»&8] &7Yêu cầu khôi phục mật khẩu của người dùng đã được xác nhận!'
+forceConfirmPasswordRecoveryErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcerconfirmpasswordrecovery <tên-người-chơi|uuid> <mật-khẩu-mới>'
+forceConfirmPasswordRecoveryErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceConfirmPasswordRecoveryErrorUserHasNotRecoveryCode: '&8[&c&l✖&8] &cKhông có mã khôi phục!'
+forceConfirmPasswordRecoverySuccessConfirmedPasswordRecovery: '&8[&a&l✔&8] &aĐã xác nhận khôi phục mật khẩu cho người chơi!'
 
-forceRequestSecondFactorErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcerequestsecondfactor <tên hiệu|uuid>'
-forceRequestSecondFactorErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceRequestSecondFactorErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceRequestSecondFactorErrorUserPremium: '&8[&c&l»&8] &7Người dùng là người chơi premium!'
-forceRequestSecondFactorErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceRequestSecondFactorErrorUserHasAlreadySecondFactor: '&8[&c&l»&8] &7Người dùng đã có xác thực hai yếu tố rồi!'
-forceRequestSecondFactorSuccessSecondFactorRequested: '&8[&a&l»&8] &7Yêu cầu xác thực hai yếu tố của người dùng đã được gửi!'
+forceRequestSecondFactorErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcerequestsecondfactor <tên-người-chơi|uuid>'
+forceRequestSecondFactorErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceRequestSecondFactorErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceRequestSecondFactorErrorUserPremium: '&8[&c&l✖&8] &cNgười dùng là tài khoản Premium!'
+forceRequestSecondFactorErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceRequestSecondFactorErrorUserHasAlreadySecondFactor: '&8[&c&l✖&8] &cNgười dùng đã có 2FA!'
+forceRequestSecondFactorSuccessSecondFactorRequested: '&8[&a&l✔&8] &aĐã gửi yêu cầu 2FA cho người dùng!'
 
-forceActivateSecondFactorErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forceactivatesecondfactor <tên hiệu|uuid>'
-forceActivateSecondFactorErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceActivateSecondFactorErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceActivateSecondFactorErrorUserPremium: '&8[&c&l»&8] &7Người dùng là người chơi premium!'
-forceActivateSecondFactorErrorUserNotRegistered: '&8[&c&l»&8] &7Người dùng chưa đăng ký!'
-forceActivateSecondFactorErrorUserHasAlreadySecondFactor: '&8[&c&l»&8] &7Người dùng đã có xác thực hai yếu tố rồi!'
-forceActivateSecondFactorErrorUserNotRequestedSecondFactor: '&8[&c&l»&8] &7Người dùng chưa yêu cầu xác thực hai yếu tố!'
-forceActivateSecondFactorSuccessSecondFactorActivated: '&8[&a&l»&8] &7Xác thực hai yếu tố của người dùng đã được kích hoạt!'
+forceActivateSecondFactorErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forceactivatesecondfactor <tên-người-chơi|uuid>'
+forceActivateSecondFactorErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceActivateSecondFactorErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceActivateSecondFactorErrorUserPremium: '&8[&c&l✖&8] &cNgười dùng là tài khoản Premium!'
+forceActivateSecondFactorErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceActivateSecondFactorErrorUserHasAlreadySecondFactor: '&8[&c&l✖&8] &cNgười dùng đã có 2FA!'
+forceActivateSecondFactorErrorUserNotRequestedSecondFactor: '&8[&c&l✖&8] &cNgười dùng chưa yêu cầu 2FA!'
+forceActivateSecondFactorSuccessSecondFactorActivated: '&8[&a&l✔&8] &aĐã bật 2FA cho người dùng!'
 
-forceDeactivateSecondFactorErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcedeactivatesecondfactor <tên hiệu|uuid>'
-forceDeactivateSecondFactorErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceDeactivateSecondFactorErrorUserBedrock: '&8[&c&l»&8] &7Người dùng là người chơi bedrock!'
-forceDeactivateSecondFactorErrorUserPremium: '&8[&c&l»&8] &7Người dùng là người chơi premium!'
-forceDeactivateSecondFactorErrorUserNotRegistered: '&8[&c&l»&8] &Người dùng chưa đăng ký!'
-forceDeactivateSecondFactorErrorUserHasNotSecondFactor: '&8[&c&l»&8] &7Người dùng không có xác thực hai yếu tố!'
-forceDeactivateSecondFactorSuccessSecondFactorDeactivated: '&8[&a&l»&8] &7Xác thực hai yếu tố của người dùng đã được vô hiệu hóa!'
+forceDeactivateSecondFactorErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcedeactivatesecondfactor <tên-người-chơi|uuid>'
+forceDeactivateSecondFactorErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceDeactivateSecondFactorErrorUserBedrock: '&8[&c&l✖&8] &cNgười dùng là tài khoản Bedrock!'
+forceDeactivateSecondFactorErrorUserPremium: '&8[&c&l✖&8] &cNgười dùng là tài khoản Premium!'
+forceDeactivateSecondFactorErrorUserNotRegistered: '&8[&c&l✖&8] &cNgười dùng chưa đăng ký!'
+forceDeactivateSecondFactorErrorUserHasNotSecondFactor: '&8[&c&l✖&8] &cNgười dùng chưa bật 2FA!'
+forceDeactivateSecondFactorSuccessSecondFactorDeactivated: '&8[&a&l✔&8] &aĐã tắt 2FA cho người dùng!'
 
-forcePurgeUserProfileErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcepurgeuserprofile <tên hiệu|uuid>'
-forcePurgeUserProfileErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forcePurgeUserProfileSuccessUserProfilePurged: '&8[&a&l»&8] &7Người dùng đã được xóa sạch!'
-forcePurgeUserProfileSuccessKickedMessage: '&8[&a&l»&8] &7Bạn đã bị xóa sạch!'
+forcePurgeUserProfileErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcepurgeuserprofile <tên-người-chơi|uuid>'
+forcePurgeUserProfileErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forcePurgeUserProfileSuccessUserProfilePurged: '&8[&a&l✔&8] &aĐã xóa toàn bộ dữ liệu người dùng!'
+forcePurgeUserProfileSuccessKickedMessage: '&8[&c&l✖&8] &cTài khoản của bạn đã được xóa bởi Quản trị viên!'
 
-forceViewUserProfileErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forceviewuserprofile <tên hiệu|uuid>'
-forceViewUserProfileErrorUserNotExist: '&8[&c&l»&8] &7Người dùng này không tồn tại!'
-forceViewUserProfileSuccessNoData: '&c[không có dữ liệu]'
+forceViewUserProfileErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forceviewuserprofile <tên-người-chơi|uuid>'
+forceViewUserProfileErrorUserNotExist: '&8[&c&l✖&8] &cNgười dùng không tồn tại!'
+forceViewUserProfileSuccessNoData: '&c[Trống]'
 forceViewUserProfileSuccessProfile: |-
   &f
-  &8[&a&l»&8] ══════════════════════════════ [&a&l«&8]
-  &f  &a&l» &7Tên hiệu &a&l» &7%nickname%
-  &f  &a&l» &7ID duy nhất &a&l» &7%unique_id%
-  &f  &a&l» &7ID premium &a&l» &7%premium_id%
-  &f  &a&l» &7Địa chỉ email &a&l» &7%email_address%
-  &f  &a&l» &7Phiên hết hạn &a&l» &7%session_expires%
-  &f  &a&l» &7Máy chủ cuối &a&l» &7%last_server%
-  &f  &a&l» &7Địa chỉ cuối &a&l» &7%last_address%
-  &f  &a&l» &7Lần cuối thấy &a&l» &7%last_seen%
-  &f  &a&l» &7Địa chỉ đầu tiên &a&l» &7%first_address%
-  &f  &a&l» &7Lần đầu thấy &a&l» &7%first_seen%
-  &8[&a&l»&8] ══════════════════════════════ [&a&l«&8]
+  &8[&b&lTHÔNG TIN TÀI KHOẢN&8] ═════════════════
+  &f  &8» &7Tên nhân vật: &e%nickname%
+  &f  &8» &7UUID: &f%unique_id%
+  &f  &8» &7Premium ID: &a%premium_id%
+  &f  &8» &7Email: &f%email_address%
+  &f  &8» &7Phiên hết hạn: &f%session_expires%
+  &f  &8» &7Server cuối: &f%last_server%
+  &f  &8» &7IP cuối: &f%last_address%
+  &f  &8» &7Lần cuối online: &f%last_seen%
+  &f  &8» &7IP đầu tiên: &f%first_address%
+  &f  &8» &7Lần đầu tham gia: &f%first_seen%
+  &8═════════════════════════════════════════
   &f
 
-forceViewUserProfilesErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forceviewuserprofiles <địa chỉ>'
-forceViewUserProfilesErrorUsersNotExist: '&8[&c&l»&8] &7Không có người dùng nào với địa chỉ đó!'
-forceViewUserProfilesLoadingProfiles: '&8[&e&l»&8] &7Đang tìm kiếm người dùng...'
-forceViewUserProfilesSuccessHeader: '&8[&a#&8] &7Tên hiệu &a&l» &7Lần cuối thấy'
-forceViewUserProfilesSuccessProfile: '&8[&a%ordinal%&8] &7%nickname% &a&l» &7%last_seen%' # Có thể dùng tất cả placeholder từ 'forceViewUserProfileSuccessProfile'.
+forceViewUserProfilesErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forceviewuserprofiles <địa-chỉ-ip>'
+forceViewUserProfilesErrorUsersNotExist: '&8[&c&l✖&8] &cKhông tìm thấy người dùng nào với IP này!'
+forceViewUserProfilesLoadingProfiles: '&8[&e&l⏳&8] &eĐang tra cứu dữ liệu...'
+forceViewUserProfilesSuccessHeader: '&8[&a#&8] &7Tài khoản &8» &7Lần cuối thấy'
+forceViewUserProfilesSuccessProfile: '&8[&e%ordinal%&8] &a%nickname% &8» &7%last_seen%'
 
-forceMergePremiumUserProfileErrorUsage: '&8[&c&l»&8] &7Cách dùng: /forcemergepremiumuserprofile <tên-hiệu-hiện-tại> <tên-hiệu-trước-đây>'
-forceMergePremiumUserProfileErrorUserNotExist: '&8[&c&l»&8] &7Người dùng hiện tại này không tồn tại!'
-forceMergePremiumUserProfileErrorUserNotPremium: '&8[&c&l»&8] &7Người dùng hiện tại không phải người chơi premium!'
-forceMergePremiumUserProfileErrorMergedWithUserNotExist: '&8[&c&l»&8] &7Người dùng trước đây này không tồn tại!'
-forceMergePremiumUserProfileErrorMergedWithUserBedrock: '&8[&c&l»&8] &7Người dùng trước đây là người chơi bedrock!'
-forceMergePremiumUserProfileErrorMergedWithUserPremium: '&8[&c&l»&8] &7Người dùng trước đây là người chơi premium!'
-forceMergePremiumUserProfileSuccessKickedMessage: '&8[&a&l»&8] &7Bạn đã được gộp tài khoản!'
-forceMergePremiumUserProfileSuccessMerged: '&8[&a&l»&8] &7Người dùng đã được gộp tài khoản!'
+forceMergePremiumUserProfileErrorUsage: '&8[&c&l✖&8] &cCú pháp: &e/forcemergepremiumuserprofile <tên-mới> <tên-cũ>'
+forceMergePremiumUserProfileErrorUserNotExist: '&8[&c&l✖&8] &cTài khoản mới không tồn tại!'
+forceMergePremiumUserProfileErrorUserNotPremium: '&8[&c&l✖&8] &cTài khoản mới không phải Premium!'
+forceMergePremiumUserProfileErrorMergedWithUserNotExist: '&8[&c&l✖&8] &cTài khoản cũ không tồn tại!'
+forceMergePremiumUserProfileErrorMergedWithUserBedrock: '&8[&c&l✖&8] &cTài khoản cũ là tài khoản Bedrock!'
+forceMergePremiumUserProfileErrorMergedWithUserPremium: '&8[&c&l✖&8] &cTài khoản cũ là tài khoản Premium!'
+forceMergePremiumUserProfileSuccessKickedMessage: '&8[&a&l✔&8] &aTài khoản của bạn đã được gộp thành công!'
+forceMergePremiumUserProfileSuccessMerged: '&8[&a&l✔&8] &aGộp tài khoản thành công!'
